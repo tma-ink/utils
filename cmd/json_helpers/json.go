@@ -1,4 +1,4 @@
-package json
+package json_helpers
 
 import (
 	"encoding/json"
@@ -46,7 +46,7 @@ func WriteJSON(w http.ResponseWriter, status int, data any, headers ...http.Head
 		}
 	}
 
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "application/json_helpers")
 	w.WriteHeader(status)
 	_, err = w.Write(out)
 	if err != nil {
